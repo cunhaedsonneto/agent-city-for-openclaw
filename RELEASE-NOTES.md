@@ -11,4 +11,4 @@ Histórico técnico preservado nesta versão: o FORGE criou a variante inicial c
 - Consolidação do vínculo temporal de `startAt`/`startedAt` com janela de −1 s a +2 s; `inFlightRun` com ID divergente é descartado.
 - Saneamento ampliado para documentos formatados, senhas com conectivo e autorização Basic.
 
-As cinco texturas foram substituídas por ativos procedurais gerados pelo script versionável `scripts/generate_textures.py`, sem insumos externos. A revisão de código/privacidade passou; ajustes visuais do reteste aguardam novo parecer do PIXEL antes de release público. A publicação da rota live privada e do repositório é etapa separada.
+As cinco texturas foram substituídas por ativos procedurais gerados pelo script versionável `scripts/generate_textures.py`, sem insumos externos. A revisão de código/privacidade e o reteste visual do PIXEL passaram em 16/10/2026. A publicação da rota live privada é uma etapa separada e não faz parte desta versão pública.
