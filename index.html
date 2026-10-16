@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ece7dd">
+  <meta name="color-scheme" content="light">
+  <title>Agent City · maquete viva</title>
+  <link rel="icon" href="data:,">
+  <script type="module" crossorigin src="/agent-city-for-openclaw/assets/index-DqqYmlEb.js"></script>
+  <link rel="stylesheet" crossorigin href="/agent-city-for-openclaw/assets/index-D5W7batQ.css">
+</head>
+<body>
+  <a class="skip" href="#painel">Pular para a lista de agentes</a>
+  <header class="top">
+    <div class="title">
+      <span class="kicker">Prancha 01 · maquete viva</span>
+      <h1>Agent City</h1>
+    </div>
+    <div class="status-line">
+      <span id="conn" class="conn is-wait" role="status" aria-live="polite"><i aria-hidden="true"></i><span>Conectando</span></span>
+      <time id="clock" class="clock"></time>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="stage" aria-labelledby="stage-title">
+      <h2 id="stage-title" class="sr-only">Maquete 3D da cidade dos agentes</h2>
+      <p id="scene-desc" class="sr-only">Maquete 3D: Escritórios ao fundo, Jogos à esquerda, Dormitórios à direita e Lazer à frente. Quem trabalha aparece nas mesas do deck dos Escritórios. A lista de agentes traz o mesmo estado em texto.</p>
+      <div id="scene" class="scene" aria-describedby="scene-desc">
+        <div id="labels" class="labels" aria-hidden="true"></div>
+        <div id="scene-flow" class="scene-flow" hidden></div>
+        <div id="nogl" class="nogl" hidden>Seu navegador não abriu a visualização 3D. A lista de agentes continua atualizada ao vivo.</div>
+        <div class="scene-tools" role="toolbar" aria-label="Câmera da maquete">
+          <button type="button" data-cam="left" aria-label="Girar para a esquerda" title="Girar para a esquerda">⟲</button>
+          <button type="button" data-cam="in" aria-label="Aproximar" title="Aproximar">+</button>
+          <button type="button" data-cam="out" aria-label="Afastar" title="Afastar">−</button>
+          <button type="button" data-cam="right" aria-label="Girar para a direita" title="Girar para a direita">⟳</button>
+          <button type="button" data-cam="reset" aria-label="Voltar à vista inicial" title="Vista inicial">⌂</button>
+        </div>
+        <p class="hint" id="hint">Arraste para girar · role para aproximar · clique em um agente</p>
+        <div id="detail" class="detail" hidden aria-live="polite"></div>
+      </div>
+      <div class="caption">
+        <ul class="legend" aria-label="Legenda de estados">
+          <li><i class="dot working" aria-hidden="true"></i>Trabalhando <small>execução confirmada agora</small></li>
+          <li><i class="dot resting" aria-hidden="true"></i>Em pausa <small>encerrou execução recente</small></li>
+          <li><i class="dot unknown" aria-hidden="true"></i>Sem informação <small>sem confirmação recente</small></li>
+        </ul>
+        <p class="note">Carros, jogos e lazer são cenas ilustrativas. Só o estado de trabalho vem do OpenClaw. As janelas dos Escritórios acendem apenas quando há alguém trabalhando.</p>
+      </div>
+    </section>
+
+    <aside id="painel" class="panel" tabindex="-1" aria-label="Estado dos agentes">
+      <p id="live" class="sr-only" aria-live="polite"></p>
+      <div class="now">
+        <span class="kicker">Agora</span>
+        <p id="summary" class="summary">Aguardando a primeira leitura…</p>
+        <p id="fresh" class="fresh"></p>
+      </div>
+      <div id="groups" class="groups"></div>
+      <section class="flow" aria-labelledby="flow-title"><h2 id="flow-title">Delegações observadas</h2><div id="flow" class="flow-list"><p class="empty">Nenhuma delegação confirmada.</p></div></section>
+      <section class="log" aria-labelledby="log-title">
+        <div class="log-head">
+          <h2 id="log-title">Registro confirmado</h2>
+          <span id="since" class="since"></span>
+        </div>
+        <p class="log-note">O histórico desta versão não reconstrói execuções passadas; mostra somente o que a fonte confirma agora.</p>
+        <ol id="log" class="log-list"><li class="empty">Nenhuma execução encerrada até agora.</li></ol>
+      </section>
+      <p class="privacy">Modo live: trechos de tarefas delegadas e falas observadas são saneados no servidor e exibidos apenas na rota privada. Modo demo: tudo é sintético. Arquivos e identificadores de sessão não chegam ao navegador.</p>
+    </aside>
+  </main>
+</body>
+</html>
