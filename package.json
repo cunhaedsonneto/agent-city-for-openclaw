@@ -1,0 +1,19 @@
+{
+  "name": "agent-city-for-openclaw",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5175",
+    "build": "vite build",
+    "start": "node server/index.mjs",
+    "test": "NODE_ENV=test node --test server/*.test.mjs",
+    "build:demo": "VITE_AGENT_CITY_DEMO=1 vite build --base=/agent-city-for-openclaw/ --outDir=dist-demo"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}
