@@ -7,6 +7,14 @@ Maquete 3D para acompanhar agentes OpenClaw. Esta versão tem **dois modos separ
 
 A maquete é ilustrativa. Carros, lazer e deslocamentos não são telemetria. O backend é somente leitura e não envia comandos aos agentes.
 
+## Capturas de tela
+
+![Agent City — vista da demonstração pública no desktop](docs/screenshots/agent-city-demo-desktop.png)
+
+![Agent City — detalhe da ficha de um agente fictício](docs/screenshots/agent-city-demo-desktop-detalhe-agente.png)
+
+Capturas da demonstração pública com dados fictícios.
+
 ## Requisitos e instalação
 
 Node.js 20+; modo live exige CLI `openclaw` no PATH, Gateway local acessível e permissão local de leitura de `~/.openclaw/openclaw.json`.
